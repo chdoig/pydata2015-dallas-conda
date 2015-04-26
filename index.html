@@ -450,7 +450,7 @@ dependencies:
 					</section>
 
 					<section>
-						<p> Hack -> Project -> Library -> Production</p>
+						<img width="100%" style="margin-left:8%" src="images/topik-1.png">
 					</section>
 					<section>
 						<h4>Topik - An example</h4>
@@ -459,15 +459,17 @@ dependencies:
 					</section>
 
 					<section>
-						<h4>Topik - An example</h4>
-						<h6>Topic Modeling</h6>
+						<p>Topic Modeling</p>
+						<a href="http://www.cs.princeton.edu/~blei/topicmodeling.html">http://www.cs.princeton.edu/~blei/topicmodeling.html</a>
 						<p>Gensim</p>
 						<a href="https://radimrehurek.com/gensim/">https://radimrehurek.com/gensim/</a>
+						<p>LDAvis</p>
+						<a href="http://cpsievert.github.io/LDAvis/reviews/vis/">http://cpsievert.github.io/LDAvis/reviews/vis/</a>
 					</section>
 
 					<section>
 						<h4>Hack</h4>
-						<li>Python code (gensim) + RScript</li>
+						<li>Python script (gensim) + RScript</li>
 						<br>
 						<p>
 						<small>code: github?</small><span style="color:red"> X</span><br>
@@ -478,17 +480,12 @@ dependencies:
 					</section>
 
 					<section>
-						<h4>Adhoc hack</h4>
-						<li>Python code + gensim + RScript</li>
-						<br>
-						<pre><code language-bash></code></pre>
-					</section>
-
-
-					<section>
 						<h4>Project</h4>
-						<li>Python code + Gensim + RScript (with download packages)</li>
-						<li>conda packages in binstar + environment.yml + git</li>
+						<li>Python code: wrapping functions, add functionality + some scripts</li>
+						<li>Conda packages: gensim, nltk, textblob...</li>
+						<li>Pypi packages</li>
+						<li>R packages: ldavis, data.table...</li>
+						<li>environment.yml</li>
 						<br>
 						<p>
 						<small>code: github?</small> <span style="color:green"> Y</span><br>
@@ -498,12 +495,27 @@ dependencies:
 						</p>
 					</section>
 
+					<section>
+						<h4>Library</h4>
+						<li>Python code: generalize, classes, multiple backend readers, CLI...</li>
+						<li>Python packages to conda packages</li>
+						<li>R packages: ldavis, data.table...</li>
+						<li>conda.recipe</li>
+						<li>conda build + binstar upload</li>
+						<small>code: github?</small> <span style="color:green"> Y</span><br>
+						<small>versions: python? gensim? R? ldavis?</small><span style="color:green"> Y</span><br>
+						<small>platform: specific?</small><span style="color:green"> Y</span><br>
+						<small>data: where? harcoded path?</small><span style="color:red"> X</span>
+					</section>
 
 					<section>
-						<h4>Project</h4>
-						<li>Python code + Gensim + RScript (with download packages)</li>
-						<br>
-						<pre><code language-bash></code></pre>
+						<h4>Application</h4>
+						<li>Add topik dependency in your environment.yml</li>
+						<li>Include topik in your topic space code</li>
+						<small>code: github?</small> <span style="color:green"> Y</span><br>
+						<small>versions: python? gensim? R? ldavis?</small><span style="color:green"> Y</span><br>
+						<small>platform: specific?</small><span style="color:green"> Y</span><br>
+						<small>data: where? harcoded path?</small><span style="color:yellow"> ~ </span>
 					</section>
 				</section>
 

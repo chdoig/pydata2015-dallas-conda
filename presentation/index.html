@@ -48,22 +48,17 @@
 				</section>
 
 				<section>
-				<h3>This talk</h3>	
-				<p><a href="http://chdoig.github.com/pydata-dallas-conda">http://chdoig.github.com/pydata-dallas-conda</a></p>
-					<br>
-					<h2 style='font-size:38px'>
-					<span class="fragment fade-out" data-fragment-index="6">
-					<span class="fragment roll-in"  data-fragment-index="5"> Reproducible</span></span>
-					<span class="fragment fade-out" data-fragment-index="4">
-					<span class="fragment roll-in"  data-fragment-index="3"> Multi-language</span></span>
-					<span class="fragment fade-out" data-fragment-index="2">
-					<span class="fragment roll-in" data-fragment-index="1"> Data Science</span></span>
-					<span class="fragment fade-out" data-fragment-index="8">
-					<span class="fragment roll-in"  data-fragment-index="7"> Conda</span></span></h2>
-					<h2 style="font-size:38px"><span class="fragment roll-in"  data-fragment-index="9"> Reproducible Multi-language Data Science with Conda</span></h2>
-					<br>
-					
+					<h3 style="text-align:center">This talk</h3>
+					<div style="font-size:36px;">
+						<li>Data Science</li>
+						<li>Multi-language</li>
+						<li>Reproducibility</li>
+						<li>Conda</li>
+						<li>Reproducible Multi-language Data Science with Conda</li>
+						<li>A practical example: Topik</li>	
+					<p><a href="http://chdoig.github.com/pydata-dallas-conda">http://chdoig.github.com/pydata-dallas-conda</a></p>
 				</section>
+
 
 				<!-- Example of nested vertical slides -->
 				<section>
@@ -72,15 +67,17 @@
 					</section>
 					<section>
 						<h4>Tasks</h4>
+						<img src="images/data-science-1.png">
+					</section>
+					<section>
+						<h4>Contributors</h4>
 						<img src="images/data-science-2.png">
 					</section>
 					<section>
-						<h4>Players</h4>
-						<img src="images/data-science.png">
-					</section>
-					<section>
 						<h2>Data Science</h2>
-						<h6>...involves different types of tasks, sometimes with different players...</h6>
+						<li>Different tasks</li>
+						<li>Different deliverables</li>
+						<li>Different contributors</li>
 					</section>
 				</section>
 
@@ -110,7 +107,9 @@
 
 					<section>
 						<h2>Multi-language</h2>
-						<h6>Data Science is multi-language. Let's find symbiosis among languages, embrace language agnostic applications and expose language bindings</h6>
+						<li>Data Science is multi-language</li>
+						<li>Language agnostic applications</li>
+						<li>Language bindings/APIs</li>
 					</section>
 
 				</section>
@@ -135,8 +134,15 @@
 					</section>
 
 					<section>
+						<h4>Share</h4>
+						<img width="90%" src="images/repro-4.png">
+					</section>
+
+					<section>
 						<h2>Reproducible</h2>
-						<h6>Reproducibiliy requires sharing code, dependencies versions, data and platform requirements. For usability and performance, ideally, at the lowest cost possible (space, network bandwith)</h6>
+						<li>Meet requirements: code, versions, data, platform</li>
+						<li>Minimize overhead</li>
+						<li>Share</li>
 					</section>
 				</section>
 
@@ -146,11 +152,30 @@
 						<h2>Conda</h2>
 					</section>
 					<section>
-						<h2>Conda</h2>
+						<h4>Conda</h4>
 						<p>Language-agnostic cross-platform package and environment manager written in Python</p>
 						<p><a href="http://conda.pydata.org">http://conda.pydata.org</a></p>
 					</section>
 
+					<section>
+						<h4>Conda vs Anaconda vs Miniconda</h4>
+						<div style="font-size:36px;">
+						<p><a href="http://conda.pydata.org">Conda:</a> Package and environment manager</p>
+						<p><a href="https://store.continuum.io/cshop/anaconda/">Anaconda:</a> Python + Conda + a bunch of packages</p>
+						<p><a href="http://conda.pydata.org/miniconda.html">Miniconda:</a> Python + Conda</p>
+						</div>	
+					</section>
+
+					<section>
+						<h4>Conda - pip</h4>
+						<img width="90%" style="margin-left:8%" src="images/conda-4.png">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 style="font-size:38px">Reproducible Multi-language Data Science with Conda</h2>
+					</section>
 					<section>
 						<h4>Conda - Data Science</h4>
 						<img width="90%" style="margin-left:8%" src="images/conda-1.png">
@@ -167,14 +192,6 @@
 						<img width="100%" style="margin-left:8%" src="images/conda-2.png">
 					</section>
 
-				</section>
-
-
-				<section>
-					<section>
-						<h2 style="font-size:38px">Reproducible Multi-language Data Science with Conda</h2>
-					</section>
-
 					<section>
 						<h4>Get it</h4>
 							<li>Anaconda: <a href="https://store.continuum.io/cshop/anaconda/">https://store.continuum.io/cshop/anaconda/</a></li>
@@ -187,7 +204,7 @@
 					<section>
 						<h4>Install packages</h4>
 							<li>Programming languages, e.g. python=2.7, scala</li>
-							<li>Document store, e.g. mongodb</li>
+							<li>Databases and document stores, e.g. mongodb</li>
 							<li>Libraries, e.g. pandas, bokeh, spark</li>
 						<br>
 						<pre><code language-bash>$ conda install python=2.7 mongodb pandas bokeh=0.8</code></pre>
@@ -196,7 +213,40 @@
 					<section>
 						<h4>Manage environments</h4>
 						<br>
-						<pre><code language-bash></code></pre>
+						<p>Write your environment.yml file</p>
+						<pre><code language-bash>vim environment.yml</code></pre>
+						<pre><code language-bash> 
+name: pydata
+dependencies:
+  - python=2.7
+  - mongodb
+  - pandas
+  - bokeh
+						</code></pre>
+					</section>
+
+
+					<section>
+						<h4>Manage environments</h4>
+						<br>
+						<p>Create your environment</p>
+						<pre><code language-bash>$ conda env create</code></pre>
+					</section>
+
+					<section>
+						<h4>Manage environments</h4>
+						<br>
+						<p>Activate your environment</p>
+						<pre><code language-bash>$ source activate pydata</code></pre>
+					</section>
+
+					<section>
+						<h4>Manage environments</h4>
+						<br>
+						<p>List all the packages in that environment</p>
+						<pre><code language-bash>$ conda list</code></pre>
+						or
+						<pre><code language-bash>$ conda env export</code></pre>
 					</section>
 
 					<section>
@@ -211,7 +261,6 @@
 						<pre><code language-bash></code></pre>
 					</section>
 
-
 					<section>
 						<h4>Create production and dev channels</h4>
 
@@ -219,22 +268,91 @@
 						<pre><code language-bash></code></pre>
 					</section>
 
+				</section>
+
+
+				<section>
 					<section>
-						<h4>A reproducible multi-language data science project example</h4>
+						<h2 style="font-size:38px">A practical example</h2>
+					</section>
+
+					<section>
+						<h4>Topik - An example</h4>
+						<p>Motivation:</p>
+						<li>Using <i>gensim</i>, a Python pacakge for topic modeling</li>
+						<li>Found <i>ldavis</i> an R package for an interactive topic modeling visualization</li>
+						<li>Adhoc hack -> DS Project -> Reusable library</li>
+					</section>
+
+					<section>
+						<h4>Topik - An example</h4>
+						<p>Topic Modeling</p>
+						<p>A topic model is a type of statistical model for discovering the abstract “topics” that occur in a collection of documents</p>
+					</section>
+
+					<section>
+						<h4>Topik - An example</h4>
+						<h6>Topic Modeling</h6>
+						<p>Gensim</p>
+						<a href="https://radimrehurek.com/gensim/">https://radimrehurek.com/gensim/</a>
+					</section>
+
+					<section>
+						<h4>Adhoc hack</h4>
+						<li>Python code + Gensim + RScript (with download packages)</li>
+						<br>
+						<p>
+						<small>code: github? X</small><br>
+						<small>versions: python? gensim? R? ldavis? X</small><br>
+						<small>platform: specific? X</small><br>
+						<small>data: where? harcoded path? X</small>
+						</p>
+					</section>
+
+					<section>
+						<h4>Adhoc hack</h4>
+						<li>Python code + Gensim + RScript (with download packages)</li>
 						<br>
 						<pre><code language-bash></code></pre>
 					</section>
 
+
+					<section>
+						<h4>Project</h4>
+						<li>Python code + Gensim + RScript (with download packages)</li>
+						<li>conda packages in binstar + environment.yml + git</li>
+						<br>
+						<p>
+						<small>code: github? Y</small><br>
+						<small>versions: python? gensim? R? ldavis? Y</small><br>
+						<small>platform: specific? X</small><br>
+						<small>data: where? harcoded path? X</small>
+						</p>
+					</section>
+
+
+					<section>
+						<h4>Project</h4>
+						<li>Python code + Gensim + RScript (with download packages)</li>
+						<br>
+						<pre><code language-bash></code></pre>
+					</section>
 				</section>
 
 				<section>
-					<section>
-						<h2 style="font-size:38px">Thanks to:</h2>
-						<li>Aaron Meurer</li>
-						<li>Ilan Schnell</li>
-						<li>Travis Oliphant</li>
-						<li>Bryan Van de Ven</li>
-					</section>
+					<h2 style="font-size:38px">Special thanks to the conda developers:</h2>
+					<li>Aaron Meurer</li>
+					<li>Ilan Schnell</li>
+					<li>Travis Oliphant</li>
+					<li>Travis Swicegood</li>
+					<li>Bryan Van de Ven</li>
+				</section>
+
+				<section>
+					<h2>Questions?</h2>
+					<p>Slides: <br><a href="http://chdoig.github.com/pydata-dallas-conda">http://chdoig.github.com/pydata-dallas-conda</a></p>
+					<p>Email: <a>christine.doig@continuum.io</a></p>
+					<p>Twitter: <a href="http://twitter.com/ch_doig">ch_doig</a></p>
 				</section>
 
 			</div>

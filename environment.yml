@@ -1,0 +1,12 @@
+name: pydata
+channels:
+  - asmeurer
+  - quasiben
+  - chdoig
+dependencies:
+  - python=2.7
+  - mongodb
+  - pandas
+  - bokeh=0.8.2
+  - r
+  - spark

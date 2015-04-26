@@ -1,0 +1,6 @@
+name: pydata1
+dependencies:
+  - python=2.7
+  - mongodb
+  - pandas
+  - bokeh=0.8.2

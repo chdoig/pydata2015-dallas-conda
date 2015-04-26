@@ -1,0 +1,22 @@
+name: pydata2
+channels:
+  - asmeurer
+  - chdoig
+  - quasiben
+dependencies:
+  - python=2.7
+  - r
+  - r-data.table
+  - bokeh
+  - nutch
+  - spark
+  - scipy
+  - pip
+  - pip:
+    - pattern
+    - gensim
+    - textblob
+    - ijson
+    - click
+    - solrpy
+    - elasticsearch

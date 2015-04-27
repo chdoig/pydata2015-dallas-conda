@@ -1,5 +1,5 @@
-Reproducible Multi-language Data Science with Conda
+## README 
 
-PyData Dallas 2015
+Slides for my talk: Reproducible Multi-language Data Science with Conda, PyData Dallas 2015
 
-Christine Doig
+## http://chdoig.github.io/pydata2015-dallas-conda/
